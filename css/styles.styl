@@ -175,9 +175,10 @@ a .header-btn-icon:hover
 	.header-item-container
 		padding 0 8px
 		text-align center
-.header-item[data-which="page-number"] .header-text
+.header-item .header-text
 	font-size 1.3em
 	font-weight 200
+.header-item[data-which="page-number"] .header-text
 	input
 		width 22px
 		text-align right
@@ -349,7 +350,7 @@ button_offset = 35%
 	top (header_height + header_margin)
 	right 0
 	left 0
-	z-index 999
+	z-index 9999
 .main-nav-btn-container
 	display inline-block
 	user-select none
@@ -395,6 +396,7 @@ nav_helper_right = 80px
 	line-height 15px
 	color #969696
 	animation bounce-left-right 2.75s infinite
+	opacity .75
 .nav-helper-arrows
 	font-size 1.4em
 	white-space nowrap
@@ -447,6 +449,13 @@ body[data-format="mobile"]
 		color #71BFFF
 	.section-title
 		margin-top 5px
+	.section-subtitle
+		letter-spacing 1px
+		font-size 1.2em
+		color #fff
+	.section-subtitle span
+		color #aaa
+		text-transform none
 #easter-egg-img
 	position absolute
 	top 9%
@@ -859,7 +868,7 @@ body[data-format="double"][data-bookend="true"] .page-container.exit-to-right.ri
 .mask
 	position absolute
 	background-color bg_layout_color
-	z-index 999
+	z-index 9999
 	opacity 0
 .mask[data-orientation="horizontal"]
 	height 0
@@ -915,9 +924,12 @@ body[data-format="mobile"]
 	.tooltipped-i[data-focus="true"]:before,
 	.tooltipped-i[data-focus="true"]:after
 		display none
-	.header-item[data-which="page-number"] .header-text
+	.header-item .header-text
 		position relative
 		top 3px
+	.header-item[data-which="pub-date"] .header-text
+		transform translateX(-10px)
+	.header-item[data-which="page-number"] .header-text
 		input
 			width 25px
 	.nav-helpers

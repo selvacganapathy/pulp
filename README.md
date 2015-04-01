@@ -6,16 +6,16 @@ An open-source viewer for displaying comics online, developed for the  story [Te
 #### [Live demo](http://ajam.github.io/pulp)
 
 #### Double view
-![](https://raw.githubusercontent.com/ajam/pulp/master/demo-assets/double-view.gif)
+![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/double-view.gif)
 
 #### Single view
-![](https://raw.githubusercontent.com/ajam/pulp/master/demo-assets/single-view.gif)
+![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/single-view.gif)
 
 #### Mobile view (panel by panel swiping, tap to zoom)
-![](https://raw.githubusercontent.com/ajam/pulp/master/demo-assets/mobile-view-simulator.gif)
+![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/mobile-view-simulator.gif)
 
 #### Mobile drawer
-![](https://raw.githubusercontent.com/ajam/pulp/master/demo-assets/drawer.gif)
+![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/drawer.gif)
 
 ### Requirements / assumptions
 
@@ -80,6 +80,7 @@ Pulp also has a few options that it lets you change, if you so wish. They are al
 
 ````js
 {
+	"pubDate": "Jan 1, 1970", // This will appear in the header on desktop and in the drawer on mobile
 	"imgFormat": "jpg", // What format are your images in?
 	"whitelabel": {
 		"files": {
@@ -104,13 +105,11 @@ Pulp also has a few options that it lets you change, if you so wish. They are al
 
 You might also want to include some `<noscript>` for people who have JavaScript disabled, such as:
 
-````
+````html
 <noscript>
 	<p>It appears you have JavaScript disabled.</p>
 	<p>View the PDF version: <a href="link/to/comic.pdf">link/to/comic.pdf</a></p>
-</div>
 </noscript>
-
 ````
 
 One improvement that can be made is these transition times also have to be changed in the Stylus CSS, `css/styles.styl`. The CSS is written using a preprocessor called Stylus with an add-on called Nib. Nib greatly simplifies writing animations as it writes all the CSS vendor prefixes for you.
